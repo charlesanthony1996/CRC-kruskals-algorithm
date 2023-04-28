@@ -1,0 +1,29 @@
+all the test files are empty since they were just a testing environment before they were taken to their
+respective files
+
+-----------------------------
+
+a high level overview of kruskals algorithm
+
+1.sort the edges of the graph in non-decreasing/ascending order of weight
+
+2.get an empty set to display the mst
+
+3.for each edge from the sorted list of edges
+- if adding the edge to the mst does not create a cycle add the edge
+- otherwise ignore it, since there are so many connections, to understand this check the ufds.py example
+-
+
+4.display and return the final mst
+
+---------------------
+
+
+how does the ufds and kruskals combine to complete the algorithm?
+
+ufds -> checks for cycles and merges the sets
+kruskals -> does the mst for the graph
+
+--------------------------
+
+time complexity has to be understood still for kruskal

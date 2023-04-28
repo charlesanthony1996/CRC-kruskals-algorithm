@@ -61,13 +61,29 @@ int main() {
     sort(edges.begin(), edges.end());
 
     vector<int> parent(n);
-    vector<int> parent[n, 0];
+    vector<int> rank(n, 0);
 
-    
+    for(int i= 0; i < n; i++) {
+        parent[i] = i;
+    }
 
+    int cost = 0;
+    vector<Edge> result;
 
+    for(Edge& e: edges) {
+        if(find(parent, e.u) != find(parent, e.v)) {
+            cost += e.weight;
+            result.push_back(e);
+            union_sets(parent, rank, e.u, e.v);
+        }
+    }
 
+    cout << "Minimum spanning tree cost: " << cost << endl;
+    cout << "Edges in the spanning tree: " << endl;
 
+    for(Edge& e: result) {
+        cout << e.u << " - ";
+    }
 
     return 0;
 }

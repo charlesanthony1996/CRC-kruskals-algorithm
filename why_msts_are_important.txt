@@ -1,0 +1,9 @@
+1. a useful application would be to connect data centers and servers in a big company to minimize latency
+and costs
+
+2. in clustering and grouping , a massive social media company might use mst's for a bunch of friends to show
+similar interests between each other, recommend content that everyone in that group likes
+
+3.in a geolocation app like google maps this might be useful when you need to find the closest restaurants near
+you that feature might use a graph related network with the edge or weight being the distance and give you
+the nearest places sorting by distance/edge in an ascending order
